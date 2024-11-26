@@ -1,6 +1,6 @@
 @props(['carouselImages'])
 
-<section class="w-full h-screen relative flex flex-col">
+<section class="w-full h-screen relative flex flex-col" style="font-family:Monotype Old English Text W01 ">
   
   {{-- Carousel images --}}
   <div class="absolute top-0 left-0 w-full h-full z-0">
@@ -15,7 +15,7 @@
           <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
           
           {{-- Text --}}
-          <div class="absolute inset-0 flex flex-col items-center justify-center lg:justify-between px-6 sm:px-8 md:px-16 lg:px-28 z-10 " style="font-family: drg">
+          <div class="absolute inset-0 flex flex-col items-center justify-center lg:justify-between px-6 sm:px-8 md:px-16 lg:px-28 z-10 ">
             <!-- Left Text -->
             <div id="left" class="absolute text-white lg:bottom-16 lg:left-16 flex flex-col items-center lg:items-start">
               <p class="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8">
@@ -27,7 +27,7 @@
             </div>
           
             <!-- Right Text -->
-            <div id="right" class="absolute text-white lg:bottom-16 lg:right-16 text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold mt-32 lg:mt-0">
+            <div id="right" class="absolute text-white lg:bottom-16 lg:right-16 text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold mt-32 lg:mt-0  pt-3 sm:pt-4 md:pt-32 lg:pt-8">
               {{$image->right}}
             </div>
           </div>
@@ -49,7 +49,7 @@
 
   <!-- Header Section -->
 <!-- Updated Header -->
-<header class="absolute top-0 left-0 w-full flex items-center justify-between px-8 text-white z-20 mt-1" style="font-family: drg">
+<header class="absolute top-0 left-0 w-full flex items-center justify-between px-8 text-white z-20 mt-1">
   <!-- Logo Section -->
   <div class="flex items-center space-x-3">
     <img src="logo/logo.svg" alt="Logo" class="h-32 w-auto"> <!-- Adjusted height to make the logo bigger -->
@@ -64,7 +64,7 @@
 
   <!-- Navigation Links for Desktop -->
   <nav class="hidden md:flex space-x-8 text-lg font-semibold">
-    <a href="#events" class="hover:text-gray-300 transition-colors">MENU</a>
+    <a href="/menu/Drinks" class="hover:text-gray-300 transition-colors">MENU</a>
     <a href="#about" class="hover:text-gray-300 transition-colors">ACTIVITIES</a>
     <a href="#contact" class="hover:text-gray-300 transition-colors">BOARD GAMES</a>
     <a href="#location" class="hover:text-gray-300 transition-colors">SCHEDULE</a>
@@ -80,7 +80,7 @@
 
   <!-- Navigation Links -->
   <nav class="flex flex-col items-center space-y-8 text-2xl font-semibold text-center tracking-wide">
-    <a href="#events" class="relative group">
+    <a href="/menu/Drinks" class="relative group">
       <span class="text-gray-300 group-hover:text-white transition duration-300">MENU</span>
       <div class="absolute left-0 bottom-0 h-1 w-0 bg-white group-hover:w-full transition-all duration-300"></div>
     </a>

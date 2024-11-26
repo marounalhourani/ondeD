@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Welcome Home</title>
+  <title>ONE DIMENSION</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -12,6 +12,12 @@
 @font-face {
     font-family: "Monotype Old English Text W01";
     src: url("fonts/txt2.ttf");
+ 
+}
+
+@font-face {
+    font-family: "Kanit";
+    src: url("fonts/Kanit-Black.ttf");
  
 }
 
@@ -53,11 +59,28 @@
       animation: rotateY 2s linear infinite; /* Rotates every 2 seconds infinitely */
       transform-style: preserve-3d; /* Ensures 3D perspective is applied */
     }
+    .splash-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
   </style>
   
 
 </head>
-<body class="w-full">
+<body class="w-full " >
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: black; z-index: 9999; display: flex; align-items: center; justify-content: center;">
+    <video id="loading-video" autoplay muted style="width: 100%; height: auto;">
+      <source src="/loading/loading.mp4" type="video/mp4">
+      <source src="/loading/loading.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
   <!-- First Section: Carousel and Header -->
   <x-home-page :carouselImages='$carouselImages'></x-home-page>
@@ -65,52 +88,54 @@
   
 
   <!-- Second Section: Hello World -->
-  <section class="w-full h-screen bg-gray-200 flex flex-col">
+  <section class="w-full h-screen bg-gray-200 flex flex-col" style="display: none;">
     <!-- Full-width container -->
     <div id="container" class="flex flex-col w-full h-full">
       <!-- Links Section -->
       <div id="links" class="grid grid-cols-4 max-md:grid-cols-2 w-full h-1/3 max-md:h-2/3">
+        
         <!-- Link 1 -->
-        <div class="flex flex-col items-center justify-center text-white bg-[url('/navimages/menu.webp')] bg-cover bg-center relative">
-          <div class="absolute inset-0 bg-green-600 opacity-75"></div>
-          <img src="icon/menu.svg" alt="Menu" class="w-32 h-32 relative">
-        </div>
-        <!-- Link 2 -->
-        <div class="flex flex-col items-center justify-center text-white bg-[url('/navimages/activities.webp')] bg-cover bg-center relative">
-          <div class="absolute inset-0 bg-yellow-600 opacity-75"></div>
-          <img src="icon/activities.svg" alt="Activities" class="w-32 h-32 relative">
-        </div>
-        <!-- Link 3 -->
-        <div class="flex flex-col items-center justify-center bg-[url('/navimages/boardgames.webp')] bg-cover bg-center relative">
-          <div class="absolute inset-0 bg-red-600 opacity-75"></div>
-          <img src="icon/boardgame.svg" alt="Board Games" class="w-32 h-32 relative">
-        </div>
-        <!-- Link 4 -->
-        <div class="flex flex-col items-center justify-center bg-[url('/navimages/schedule.webp')] bg-cover bg-center relative" style="perspective: 1000px;">
-          <div class="absolute inset-0 bg-blue-600 opacity-75"></div>
-          <img src="icon/schedule.svg" alt="Schedule" class="w-32 h-32 relative rotateY-animation" style="transform-style: preserve-3d;">
-        </div>
-      </div>
+        <a href="/menu/Drinks" class="flex flex-col items-center justify-center text-white bg-[url('/navimages/menu.webp')] bg-cover bg-center relative">
+          <div class="absolute inset-0 bg-green-600 opacity-65"></div>
+          <img src="icon/menu.svg" alt="Menu" class="w-32 h-32 relative rotateY-animation" style="transform-style: preserve-3d;">
+        </a>
   
+        <!-- Link 2 -->
+        <a href="#activities" class="flex flex-col items-center justify-center text-white bg-[url('/navimages/activities.webp')] bg-cover bg-center relative">
+          <div class="absolute inset-0 bg-yellow-600 opacity-65"></div>
+          <img src="icon/activities.svg" alt="Activities" class="w-32 h-32 relative rotateY-animation" style="transform-style: preserve-3d;">
+        </a>
+  
+        <!-- Link 3 -->
+        <a href="#boardgames" class="flex flex-col items-center justify-center bg-[url('/navimages/boardgames.webp')] bg-cover bg-center relative">
+          <div class="absolute inset-0 bg-red-600 opacity-65"></div>
+          <img src="icon/boardgame.svg" alt="Board Games" class="w-32 h-32 relative rotateY-animation" style="transform-style: preserve-3d;">
+        </a>
+  
+        <!-- Link 4 -->
+        <a href="#schedule" class="flex flex-col items-center justify-center bg-[url('/navimages/schedule.webp')] bg-cover bg-center relative" style="perspective: 1000px;">
+          <div class="absolute inset-0 bg-blue-600 opacity-65"></div>
+          <img src="icon/schedule.svg" alt="Schedule" class="w-32 h-32 relative rotateY-animation" style="transform-style: preserve-3d;">
+        </a>
+      </div>
+    
       <!-- Community Section -->
       <div id="community" class="flex items-center justify-center w-full h-2/3 max-md:h-1/3 bg-white shadow-lg bg-[url('/navimages/community.webp')] bg-cover bg-center relative">
         <div class="absolute inset-0 bg-white opacity-50"></div>
-        <button class="bg-transparent text-black border-4 border-black py-3 px-12 text-2xl font-bold rounded-full hover:bg-black hover:text-white transition relative">
+        <a href="#community" class="bg-transparent text-black border-4 border-black py-3 px-12 text-2xl font-bold rounded-full hover:bg-black hover:text-white transition relative">
           join our community
-        </button>
+        </a>
       </div>
-
-      
-      
     </div>
   </section>
   
-  <section id="about-us" class="w-full h-screen bg-[url('/background/background.webp')] bg-cover bg-center text-white relative">
+  
+  <section id="about-us" class="w-full h-screen bg-[url('/background/background.webp')] bg-cover bg-center text-white relative" style="font-family:Monotype Old English Text W01; display: none;" >
     <!-- Overlay (Optional for better text visibility) -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
   
     <!-- Content -->
-    <div class="relative flex flex-col items-center justify-start h-full px-4 text-center pt-10" style="font-family:Monotype Old English Text W01 ">
+    <div class="relative flex flex-col items-center justify-start h-full px-4 text-center pt-10" >
       <h1 class="text-4xl sm:text-6xl font-bold mb-5">We Are Hobbits In A Hobbit-Hole.</h1>
       <p id="typing-text" class="text-3xl sm:text-3xl max-w-3xl px-24 mt-10">
         <!-- The text will type itself here -->
@@ -129,7 +154,7 @@
     
   </section>
 
-  <section id="footer" class="w-full bg-[url('/background/background.webp')] bg-cover bg-center text-white relative py-8">
+  <section id="footer" class="w-full bg-[url('/background/background.webp')] bg-cover bg-center text-white relative py-8" style="font-family:Monotype Old English Text W01;display: none; ">
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
   
@@ -256,6 +281,36 @@ dragon.addEventListener('mouseover', () => {
   dragon.style.left = `${randomLeft}%`;
 });
 
+// const loadingScreen = document.getElementById("loading-screen");
+
+//     const sections = document.querySelectorAll("section");
+//     const loadingVideo = document.getElementById("loading-video");
+
+//     // Event listener for when the video ends
+//     loadingVideo.addEventListener("ended", () => {
+//       // Hide the loading screen
+//       loadingScreen.style.display = "none";
+//       // Show all sections
+//       sections.forEach((section) => {
+//         section.style.display = "block";
+//       });
+//     });
+
+
+      // Get references to the video, loading screen, and sections
+      const loadingScreen = document.getElementById("loading-screen");
+    const sections = document.querySelectorAll("section");
+    const loadingVideo = document.getElementById("loading-video");
+
+    // Event listener for when the video ends
+    loadingVideo.addEventListener("ended", () => {
+      // Hide the loading screen
+      loadingScreen.style.display = "none";
+      // Show all sections after the video ends
+      sections.forEach((section) => {
+        section.style.display = "block";
+      });
+    });
 
   </script>
 

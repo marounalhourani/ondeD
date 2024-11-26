@@ -11,12 +11,18 @@ use App\Http\Controllers\MenuController;
 Route::get('/', function () {
     return view('welcome', ['carouselImages' => ImageCarousel::orderBy('priority', 'asc')->get()]);
 });
+
+Route::get('/splash', function () {
+    return view('splash');
+})->name('splash');
+
+
+
 Route::get('/menu/{slug}', [MenuController::class, 'show'])->name('menu.show');
 
 Route::get('/menu', function () {
     return view('menu.menu',  [MenuController::class, 'show']);
 });
-
 
 
 
@@ -44,6 +50,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', [ImageCarouselController::class, 'index']); // Show all images
         Route::get('/create', [ImageCarouselController::class, 'create']); // Show create form
         Route::post('/', [ImageCarouselController::class, 'store']); // Handle form submission
+        Route::get('/edit/{img}', [ImageCarouselController::class, 'edit']); // Show a single image
+        Route::put('/{id}', [ImageCarouselController::class, 'update']);
         Route::get('/{img}', [ImageCarouselController::class, 'show']); // Show a single image
         Route::delete('/{imageCarousel}', [ImageCarouselController::class, 'destroy']); // Delete an image
     });

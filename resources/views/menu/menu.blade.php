@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Menu</title>
+  <title>MENU - 1D</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     /* Custom style to fix the background */

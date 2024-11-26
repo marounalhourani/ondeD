@@ -15,9 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('img_path');
             $table->string('event_name');
-            $table->string('month');
-            $table->string('time');
-            $table->string('description');
             $table->string('right');
             $table->string('left');
             $table->string('buttom');

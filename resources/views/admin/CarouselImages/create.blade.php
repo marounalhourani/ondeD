@@ -1,4 +1,7 @@
 <x-layout>
+  <x-slot name="header">
+CREATE A NEW CAROUSEL IMAGE WITH TEXTS
+</x-slot>
   <form method="POST" action="/admin/carousel-image" enctype="multipart/form-data" class="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-lg" id="carouselForm" autocomplete="off">
     @csrf
     <div class="space-y-6">
@@ -12,7 +15,7 @@
                 Upload a file
                 <input id="file-upload" name="file-upload" type="file" class="sr-only" accept="image/*" onchange="previewImage(event)" required>
               </label>
-              <p class="mt-2 text-sm text-gray-500">PNG, JPG, GIF up to 10MB</p>
+              <p class="mt-2 text-sm text-gray-500">PNG, JPG, GIF, WebP up to 10MB</p>
               <x-span-input id="file-upload-error"></x-span-input>
 
               <!-- Image Preview Section -->
@@ -26,11 +29,6 @@
           <x-input-field name="event-name" label="Event Name" placeholder="Enter event name" />
           <x-span-input id="event-name-error"></x-span-input>
 
-          <x-input-field name="month" label="Month" placeholder="Enter month" />
-          <x-span-input id="month-error"></x-span-input>
-
-          <x-input-field name="time" label="Time" placeholder="Enter time" />
-          <x-span-input class="text-red-500 text-sm" id="time-error"></x-span-input>
 
           <x-input-field name="right" label="Right Text" placeholder="Enter right-side text" />
           <x-span-input id="right-error"></x-span-input>
@@ -41,9 +39,6 @@
           <x-input-field name="buttom" label="buttom Text" placeholder="Buttom" />
           <x-span-input id="buttom-error"></x-span-input>
 
-          <x-input-field name="description" label="Description" placeholder="Enter description" />
-          <x-span-input id="description-error"></x-span-input>
-
           <x-input-field name="priority" label="Priority" placeholder="Enter priority" />
           <x-span-input id="priority-error"></x-span-input>
         </div>
@@ -51,9 +46,9 @@
 
       <!-- Submit Section -->
       <div class="mt-6 flex justify-end gap-6">
-        <a>
-        <button type="button" class="text-lg text-gray-600 hover:text-gray-800">Cancel</button>
-        </a>
+        
+        <a href="/admin/carousel-image/" type="button" class="text-lg text-gray-600 hover:text-gray-800">Cancel</a>
+      
         <button type="submit" class="bg-indigo-600 text-white py-3 px-8 rounded-md hover:bg-indigo-700 transition-all shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
           Save
         </button>
@@ -82,8 +77,8 @@
       if (!fileInput.files[0]) {
         document.getElementById("file-upload-error").textContent = "Cover photo is required.";
         isValid = false;
-      } else if (!["image/png", "image/jpg", "image/jpeg"].includes(fileInput.files[0].type)) {
-        document.getElementById("file-upload-error").textContent = "Only PNG, JPG, or JPEG files are allowed.";
+      } else if (!["image/png", "image/jpg", "image/jpeg","image/webp"].includes(fileInput.files[0].type)) {
+        document.getElementById("file-upload-error").textContent = "Only PNG, JPG, or JPEG WebP files are allowed.";
         isValid = false;
       } else if (fileInput.files[0].size > 10240 * 1024) { // 10 MB limit
         document.getElementById("file-upload-error").textContent = "File must be less than 10 MB.";
@@ -95,14 +90,8 @@
         document.getElementById("event-name-error").textContent = "Event name is required.";
         isValid = false;
       }
-      if (!month.value) {
-        document.getElementById("month-error").textContent = "Month is required.";
-        isValid = false;
-      }
-      if (!time.value) {
-        document.getElementById("time-error").textContent = "Time is required.";
-        isValid = false;
-      }
+
+
       if (!rightText.value) {
         document.getElementById("right-error").textContent = "Right text is required.";
         isValid = false;
@@ -111,10 +100,7 @@
         document.getElementById("left-error").textContent = "Left text is required.";
         isValid = false;
       }
-      if (!description.value) {
-        document.getElementById("description-error").textContent = "Description is required.";
-        isValid = false;
-      }
+
       if (!priority.value || isNaN(priority.value) || priority.value < 1) {
         document.getElementById("priority-error").textContent = "Priority must be an integer greater than or equal to 1.";
         isValid = false;
