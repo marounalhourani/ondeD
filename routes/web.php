@@ -12,6 +12,12 @@ Route::get('/', function () {
     return view('welcome', ['carouselImages' => ImageCarousel::orderBy('priority', 'asc')->get()]);
 });
 
+
+Route::get('/activity', function () {
+    return view('activities');
+});
+
+
 Route::get('/splash', function () {
     return view('splash');
 })->name('splash');
