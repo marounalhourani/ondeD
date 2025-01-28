@@ -106,8 +106,9 @@
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
-              <a href="/admin/carousel-image" class="nav-link px-3 py-2 text-sm font-medium text-white">All Pictures for Carousel</a>
-              <a href="/admin/carousel-image/create" class="nav-link px-3 py-2 text-sm font-medium text-white">Add New Image</a>
+            @foreach ($links as $link)
+              <a href="{{ $link['url'] }}" class="nav-link px-3 py-2 text-sm font-medium text-white">{{ $link['label'] }}</a>
+            @endforeach
               <button class="button-logout px-3 py-2 text-sm font-medium" type="submit" form="form-logout" aria-label="Logout">LOGOUT</button>
             </div>
           </div>
@@ -128,8 +129,11 @@
   <!-- Mobile menu -->
   <div class="md:hidden hidden" id="mobile-menu">
     <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-      <a href="/admin/carousel-image" class="block rounded-md px-3 py-2 text-base font-medium text-gray-600">All Pictures</a>
-      <a href="/admin/carousel-image/create" class="block rounded-md px-3 py-2 text-base font-medium text-gray-600">Add New Pictures</a>
+            @foreach ($links as $link)
+              <a href="{{ $link['url'] }}" class="block rounded-md px-3 py-2 text-base font-medium text-gray-600">{{ $link['label'] }}</a>
+            @endforeach
+
+
       <button class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 bg-red-600 hover:bg-red-700 w-full mt-2" type="submit" form="form-logout" aria-label="Logout">LOGOUT</button>
     </div>
   </div>

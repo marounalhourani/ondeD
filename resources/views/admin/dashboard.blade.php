@@ -12,7 +12,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
             
             <!-- Menu Page Div -->
-            <a href="{{ url('/menu') }}" class="group block p-10 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105 hover:rotate-1">
+            <a href="{{ url('/admin/menu') }}" class="group block p-10 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105 hover:rotate-1">
                 <div class="text-center">
                     <h2 class="text-3xl font-bold text-white mb-3 group-hover:text-pink-300 transition-colors duration-300">MENU</h2>
                     <p class="text-gray-200 opacity-80">Manage the Menu Here</p>
@@ -24,6 +24,25 @@
                 <div class="text-center">
                     <h2 class="text-3xl font-bold text-white mb-3 group-hover:text-yellow-300 transition-colors duration-300">Carousel Images</h2>
                     <p class="text-gray-200 opacity-80">Manage your Carousel Images Here</p>
+                </div>
+            </a>
+
+        <!--  Board Game Manager -->
+                        <a href="{{ url('/admin/boardgamemanager') }}" class="group block p-10 bg-gradient-to-r from-teal-500 to-red-600 rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105 hover:-rotate-1">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-white mb-3 group-hover:text-yellow-300 transition-colors duration-300">Board Games</h2>
+                    <p class="text-gray-200 opacity-80">Manage your Board Games Here</p>
+                </div>
+            </a>
+
+
+
+
+            <!--  Board Game Manager -->
+                <a href="{{ url('/admin/schedule') }}" class="group block p-10 bg-gradient-to-r from-teal-500 to-orange-600 rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105 hover:-rotate-1">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-white mb-3 group-hover:text-yellow-300 transition-colors duration-300">Schedule</h2>
+                    <p class="text-gray-200 opacity-80">Manage your Schedule Here</p>
                 </div>
             </a>
         </div>

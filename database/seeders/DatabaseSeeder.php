@@ -7,6 +7,10 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use App\Models\BgCategory;
+use App\Models\BoardGame;
+use App\Models\Date;
+use App\Models\Event;
 
 
 class DatabaseSeeder extends Seeder
@@ -57,9 +61,26 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        DB::table('users')->insert([
+        DB::table('users')->insert([[
             'name' => 'mich',
-            'password' => Hash::make('0000'), // Hash the password before storing
+            'password' => Hash::make('0000')],
+            [
+                'name' => 'admin',
+                'password' => Hash::make('admin')
+            ] 
+            // Hash the password before storing
         ]);
+
+        BgCategory::factory()
+        ->count(8) // Creates 8 categories
+        ->has(BoardGame::factory()->count(5)) // Each category has 5 games
+        ->create();
+
+ 
+
+        Date::factory()
+    ->count(12)
+    ->has(Event::factory()->count(3))
+    ->create();
     }
 }

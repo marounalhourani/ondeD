@@ -12,6 +12,7 @@ class Item extends Model
     {
         return $this->belongsTo(Category::class);
     }
+    protected $guarded = [];
 
     /** @use HasFactory<\Database\Factories\ItemFactory> */
     use HasFactory;

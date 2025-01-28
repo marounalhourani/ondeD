@@ -65,9 +65,9 @@
   <!-- Navigation Links for Desktop -->
   <nav class="hidden md:flex space-x-8 text-lg font-semibold">
     <a href="/menu/Drinks" class="hover:text-gray-300 transition-colors">MENU</a>
-    <a href="#about" class="hover:text-gray-300 transition-colors">ACTIVITIES</a>
-    <a href="#contact" class="hover:text-gray-300 transition-colors">BOARD GAMES</a>
-    <a href="#location" class="hover:text-gray-300 transition-colors">SCHEDULE</a>
+    <a href="/activity" class="hover:text-gray-300 transition-colors">ACTIVITIES</a>
+    <a href="/boardgames" class="hover:text-gray-300 transition-colors">BOARD GAMES</a>
+    <a href="/schedule" class="hover:text-gray-300 transition-colors">SCHEDULE</a>
   </nav>
 </header>
 
@@ -84,15 +84,15 @@
       <span class="text-gray-300 group-hover:text-white transition duration-300">MENU</span>
       <div class="absolute left-0 bottom-0 h-1 w-0 bg-white group-hover:w-full transition-all duration-300"></div>
     </a>
-    <a href="#about" class="relative group">
+    <a href="/activity" class="relative group">
       <span class="text-gray-300 group-hover:text-white transition duration-300">ACTIVITIES</span>
       <div class="absolute left-0 bottom-0 h-1 w-0 bg-white group-hover:w-full transition-all duration-300"></div>
     </a>
-    <a href="#contact" class="relative group">
+    <a href="/boardgames" class="relative group">
       <span class="text-gray-300 group-hover:text-white transition duration-300">BOARD GAMES</span>
       <div class="absolute left-0 bottom-0 h-1 w-0 bg-white group-hover:w-full transition-all duration-300"></div>
     </a>
-    <a href="#location" class="relative group">
+    <a href="/schedule" class="relative group">
       <span class="text-gray-300 group-hover:text-white transition duration-300">SCHEDULE</span>
       <div class="absolute left-0 bottom-0 h-1 w-0 bg-white group-hover:w-full transition-all duration-300"></div>
     </a>

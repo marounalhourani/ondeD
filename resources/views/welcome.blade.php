@@ -101,7 +101,7 @@
         </a>
   
         <!-- Link 2 -->
-        <a href="#activities" class="flex flex-col items-center justify-center text-white bg-[url('/navimages/activities.webp')] bg-cover bg-center relative">
+        <a href="/activity" class="flex flex-col items-center justify-center text-white bg-[url('/navimages/activities.webp')] bg-cover bg-center relative">
           <div class="absolute inset-0 bg-yellow-600 opacity-65"></div>
           <img src="icon/activities.svg" alt="Activities" class="w-32 h-32 relative rotateY-animation" style="transform-style: preserve-3d;">
         </a>

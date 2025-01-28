@@ -97,7 +97,7 @@
 
     <!-- Header (on top of the overlay) -->
     <header class="w-full flex flex-wrap py-16 text-3xl text-white relative z-10 px-8" role="navigation">
-      @foreach (['Drinks', 'Food', 'Dessert', 'Specials'] as $cat)
+      @foreach ($mainCategories as $cat)
         <a href="{{ route('menu.show', $cat) }}" 
            class="flex-1 text-center flex justify-center items-center border-l-4 border-white 
                   menu-link py-8 

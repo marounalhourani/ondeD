@@ -25,6 +25,8 @@ class Category extends Model
         return $this->hasMany(Item::class);
     }
 
+    protected $fillable = ['name', 'parent_id'];
+
 
     use HasFactory;
 }

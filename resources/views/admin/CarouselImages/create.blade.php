@@ -1,4 +1,8 @@
-<x-layout>
+<x-layout
+:links="[
+    ['url' => '/admin/carousel-image', 'label' => 'All pictures for Carousel'],
+    ['url' => '/admin/carousel-image/create', 'label' => 'Add new image']]"
+>
   <x-slot name="header">
 CREATE A NEW CAROUSEL IMAGE WITH TEXTS
 </x-slot>
