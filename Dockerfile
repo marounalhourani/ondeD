@@ -7,7 +7,9 @@ WORKDIR /var/www
 # Install system dependencies and PHP extensions
 RUN apt-get update && apt-get install -y \
     zip unzip git curl libpq-dev libonig-dev libxml2-dev \
-    && docker-php-ext-install pdo pdo_sqlite bcmath mbstring intl
+    sqlite3 libsqlite3-dev \
+    && docker-php-ext-install pdo pdo_sqlite bcmath mbstring intl \
+    && apt-get clean
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -30,11 +32,3 @@ EXPOSE 9000
 
 # Start PHP-FPM
 CMD ["php-fpm"]
-
-
-RUN apt-get update && apt-get install -y \
-    zip unzip git curl libpq-dev libonig-dev libxml2-dev \
-    sqlite3 libsqlite3-dev \
-    && apt-get install -y sqlite3=3.8.10.2-5 \
-    && docker-php-ext-install pdo pdo_sqlite bcmath mbstring intl
-
