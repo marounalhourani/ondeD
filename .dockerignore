@@ -10,9 +10,6 @@ node_modules/
 Thumbs.db
 
 # Ignore Laravel cache and log files
-storage/
-bootstrap/cache/
-*.log
 
 # Ignore environment files
 .env
