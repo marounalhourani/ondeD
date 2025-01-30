@@ -1,0 +1,35 @@
+# Ignore node_modules (if applicable, for example, if you're using JavaScript or Laravel Mix)
+node_modules/
+
+# Ignore IDE or editor files
+.vscode/
+.idea/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Laravel cache and log files
+storage/
+bootstrap/cache/
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore Composer's vendor directory if it will be installed during the build
+vendor/
+
+# Ignore Docker-related files that aren't necessary for the image
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Ignore temporary files and backups
+*.bak
+*.tmp
+*.swp

@@ -1,5 +1,5 @@
-# Use an official PHP image with required extensions
-FROM php:8.2-fpm
+# First stage: Install Composer and dependencies
+FROM php:8.2-fpm as build
 
 # Set working directory
 WORKDIR /var/www
@@ -20,12 +20,24 @@ COPY . .
 # Set permissions for directories
 RUN chmod -R 775 storage bootstrap/cache
 
+# Install PHP dependencies
+RUN composer install --no-dev --optimize-autoloader --prefer-dist
+
+# Second stage: Use the built image to serve the app
+FROM php:8.2-fpm
+
+# Set working directory
+WORKDIR /var/www
+
+# Copy dependencies from the first stage
+COPY --from=build /var/www /var/www
+
+# Set permissions for directories
+RUN chmod -R 775 storage bootstrap/cache
+
 # Optionally, set a non-root user (for better security)
 RUN useradd -ms /bin/bash appuser
 USER appuser
-
-# Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader --prefer-dist
 
 # Expose port 9000 (default for PHP-FPM)
 EXPOSE 9000
