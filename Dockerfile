@@ -23,7 +23,6 @@ RUN chmod -R 775 storage bootstrap/cache
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader --prefer-dist
 
-
 RUN mkdir -p storage bootstrap/cache && chmod -R 775 storage bootstrap/cache
 
 # Second stage: Use the built image to serve the app
