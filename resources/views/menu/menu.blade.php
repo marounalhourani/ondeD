@@ -93,7 +93,7 @@
   <!-- Main Section with Fixed Background and Content Inside -->
   <section class="w-full h-auto min-h-screen fixed-bg bg-[url('/navimages/menu.webp')]">
     <!-- Green Overlay (background) -->
-    <div class="absolute inset-0 bg-gradient-to-b from-green-600 to-transparent opacity-50 z-0"></div>
+    <div class="absolute inset-0 bg-gradient-to-b opacity-50 z-0"></div>
 
     <!-- Header (on top of the overlay) -->
     <header class="w-full flex flex-wrap py-16 text-3xl text-white relative z-10 px-8" role="navigation">
@@ -110,7 +110,7 @@
     
     
     <!-- Subcategories and Items Section inside the Main Section -->
-    <section id="test" class="max-w-7xl mx-auto relative z-10 px-4">
+    <section id="test" class="max-w-7xl mx-auto relative z-10 px-2">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         @foreach ($subcategories as $subcategory)
           <!-- Transparent background, but adding dark overlay for text visibility -->
@@ -125,8 +125,8 @@
                     <div class="item-container">
                       <!-- Item name and description -->
                       <div class="item-name-description">
-                        <p class="text-white font-medium text-shadow">{{ $item->name }}</p>
-                        <p class="text-sm text-white italic truncate-description text-shadow" data-full-text="{{ $item->description }}">
+                        <p class="text-xl font-semibold text-white mb-4 border-b pb-2 text-shadow">{{ $item->name }}</p>
+                        <p class="text-xl font-semibold text-white mb-4 pb-2 text-shadow italic truncate-description" data-full-text="{{ $item->description }}">
                           <span class="short-description">{{ Str::limit($item->description, 50) }}</span>
                           @if (strlen($item->description) > 50)
                             <a href="#" class="text-blue-400 expand-description underline">Read More</a>

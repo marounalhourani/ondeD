@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="min-h-screen flex justify-center items-start relative bg-cover bg-center" 
-    style="background-image: url('/activities/chill.webp'); background-attachment: fixed;">
+    style="background-image: url('/activities/schedule.webp'); background-attachment: fixed;">
     
     <!-- Background Overlay -->
     <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
@@ -24,12 +24,12 @@
             @foreach($x as $date => $events)
                 <div class="category">
                     <div onclick="toggleCategory(this)" 
-                        class="bg-red-600 text-white font-bold py-3 px-8 uppercase tracking-wide cursor-pointer rounded-lg shadow-md 
-                        flex items-center justify-between transition-all duration-500 transform hover:scale-105 active:scale-95">
+                        class="bg-red-600 text-lg text-white font-bold py-3 px-8 uppercase tracking-wide cursor-pointer rounded-lg shadow-md 
+                        flex items-center justify-center transition-all duration-500 transform hover:scale-105 active:scale-95">
                         <span>{{ $date }}</span> 
                         <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="category-content hidden mt-3 p-4 bg-gray-100 text-black rounded-lg transition-all duration-500 transform scale-95 opacity-0">
+                    <div class="category-content hidden mt-3 p-4 bg-transparent text-white text-lg rounded-lg transition-all duration-500 transform scale-95 opacity-0">
                         @if(!empty($events))
                             <ul class="text-left space-y-2">
                                 @foreach($events as $event)

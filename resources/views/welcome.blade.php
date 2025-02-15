@@ -75,7 +75,7 @@
 
   <!-- Loading Screen -->
   <div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: black; z-index: 9999; display: flex; align-items: center; justify-content: center;">
-    <video id="loading-video" autoplay muted style="width: 100%; height: auto;">
+    <video id="loading-video" autoplay muted playsinline style="width: 100%; height: auto;">
       <source src="/loading/loading.mp4" type="video/mp4">
       <source src="/loading/loading.webm" type="video/webm">
       Your browser does not support the video tag.
@@ -107,13 +107,13 @@
         </a>
   
         <!-- Link 3 -->
-        <a href="#boardgames" class="flex flex-col items-center justify-center bg-[url('/navimages/boardgames.webp')] bg-cover bg-center relative">
+        <a href="/boardgames" class="flex flex-col items-center justify-center bg-[url('/navimages/boardgames.webp')] bg-cover bg-center relative">
           <div class="absolute inset-0 bg-red-600 opacity-65"></div>
           <img src="icon/boardgame.svg" alt="Board Games" class="w-32 h-32 relative rotateY-animation" style="transform-style: preserve-3d;">
         </a>
   
         <!-- Link 4 -->
-        <a href="#schedule" class="flex flex-col items-center justify-center bg-[url('/navimages/schedule.webp')] bg-cover bg-center relative" style="perspective: 1000px;">
+        <a href="/schedule" class="flex flex-col items-center justify-center bg-[url('/navimages/schedule.webp')] bg-cover bg-center relative" style="perspective: 1000px;">
           <div class="absolute inset-0 bg-blue-600 opacity-65"></div>
           <img src="icon/schedule.svg" alt="Schedule" class="w-32 h-32 relative rotateY-animation" style="transform-style: preserve-3d;">
         </a>
@@ -122,7 +122,7 @@
       <!-- Community Section -->
       <div id="community" class="flex items-center justify-center w-full h-2/3 max-md:h-1/3 bg-white shadow-lg bg-[url('/navimages/community.webp')] bg-cover bg-center relative">
         <div class="absolute inset-0 bg-white opacity-50"></div>
-        <a href="#community" class="bg-transparent text-black border-4 border-black py-3 px-12 text-2xl font-bold rounded-full hover:bg-black hover:text-white transition relative">
+        <a href="https://chat.whatsapp.com/GnUAVKuoK0KJaKw0R7BVgs" target="_blank" class="bg-transparent text-black border-4 border-black py-3 px-12 text-2xl font-bold rounded-full hover:bg-black hover:text-white transition relative">
           join our community
         </a>
       </div>
@@ -144,7 +144,7 @@
     
   
     <!-- Video -->
-    {{-- <video id="moving-video" class="absolute top-1/2 left-1/2 transform -translate-x-1/2" autoplay loop muted> --}}
+    {{-- <video id="moving-video" class="absolute top-1/2 left-1/2 transform -translate-x-1/2" autoplay loop playsinline muted> --}}
       <img src="dragon/dragon1.gif" id="moving-dragon" alt="Dragon GIF" class="absolute top-1/2 left-1/2 transform -translate-x-1/2">
 
       <source src="dragon/dragon1.gif" type="video/mp4">
@@ -170,7 +170,7 @@
   
       <!-- Map Section -->
       <div class="w-full lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.643734737671!2d35.580232699999996!3d33.9102844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f3f4c05e3ee95%3A0xcd7154d240729296!2sThe%20Creative%20Agency!5e1!3m2!1sen!2slb!4v1732194351285!5m2!1sen!2slb" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.587056015307!2d35.57725317555375!3d33.90028747321455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f3d0079330fff%3A0x242b3ad097a414ef!2sOne%20Dimension!5e0!3m2!1sen!2slb!4v1739577051966!5m2!1sen!2slb" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -311,6 +311,14 @@ dragon.addEventListener('mouseover', () => {
         section.style.display = "block";
       });
     });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    var video = document.getElementById("loading-video");
+    if (video) {
+      video.play().catch(error => console.log("Autoplay prevented", error));
+    }
+  });
 
   </script>
 

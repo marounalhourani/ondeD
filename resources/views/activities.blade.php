@@ -77,7 +77,7 @@
     <!-- Second flex item: Championship with hover effect -->
     <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/chill.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
       <div class="absolute inset-0 bg-green-600 opacity-65"></div>
-      <div class="text-2xl text-black relative text-content">Championship</div>
+      <div class="text-4xl font-bold text-white relative text-content">Championship</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         A fun and competitive event where champions are born!
       </div>
@@ -86,7 +86,7 @@
     <!-- Third flex item: Events with hover effect -->
     <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/chill.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
       <div class="absolute inset-0 bg-red-600 opacity-65"></div>
-      <div class="text-2xl text-black relative text-content">Events</div>
+      <div class="text-4xl font-bold text-white relative text-content">Events</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         Exciting events that bring people together!
       </div>
@@ -95,7 +95,7 @@
     <!-- Fourth flex item: Music Nights with hover effect -->
     <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/table.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
       <div class="absolute inset-0 bg-yellow-300 opacity-65"></div>
-      <div class="text-2xl text-black relative text-content">Music Nights</div>
+      <div class="text-4xl font-bold text-white relative text-content">Music Nights</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         A night of unforgettable music and fun!
       </div>
@@ -104,7 +104,7 @@
     <!-- Fifth flex item: Trivia Nights with hover effect -->
     <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/table.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
       <div class="absolute inset-0 bg-blue-600 opacity-65"></div>
-      <div class="text-2xl text-black relative text-content">Trivia Nights</div>
+      <div class="text-4xl font-bold text-white relative text-content">Trivia Nights</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         Test your knowledge and win exciting prizes!
       </div>
@@ -113,7 +113,7 @@
     <!-- Sixth flex item: Book Club with hover effect -->
     <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/table.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
       <div class="absolute inset-0 bg-blue-400 opacity-65"></div>
-      <div class="text-2xl text-black relative text-content">Book Club</div>
+      <div class="text-4xl font-bold text-white relative text-content">Book Club</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         Join us for interesting book discussions!
       </div>
@@ -122,7 +122,7 @@
     <!-- Seventh flex item: Workshops with hover effect -->
     <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/table.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
       <div class="absolute inset-0 bg-slate-400 opacity-65"></div>
-      <div class="text-2xl text-black relative text-content">Workshops</div>
+      <div class="text-4xl font-bold text-white relative text-content">Workshops</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         Enhance your skills through engaging workshops!
       </div>
@@ -131,7 +131,7 @@
     <!-- Eighth flex item: Dungeon and Dragons with hover effect -->
     <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/table.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
       <div class="absolute inset-0 bg-green-500 opacity-65"></div>
-      <div class="text-2xl text-black relative text-content">Dungeon and Dragons</div>
+      <div class="text-4xl font-bold text-white relative text-content">Dungeon and Dragons</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         An epic adventure in the world of imagination!
       </div>
