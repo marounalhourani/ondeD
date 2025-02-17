@@ -69,13 +69,13 @@
 
   <section class="flex flex-col overflow-y-auto">
     <!-- First div (not modified) -->
-    <div class="h-[60vh] flex flex-col items-center justify-center text-white bg-[url('/activities/venue.webp')] bg-cover bg-[center_top_30%] bg-no-repeat relative">
-      <div class="absolute inset-0 bg-yellow-600 opacity-65"></div>
+    <div class="h-[60vh] flex flex-col items-center justify-center text-white bg-[url('/act/12.webp')] bg-cover bg-[center_top_50%] bg-no-repeat relative">
+      <div class="absolute inset-0"></div>
       <img src="icon/activities.svg" alt="Activities" class="w-64 h-64 relative rotateY-animation" style="transform-style: preserve-3d;">
     </div>
 
     <!-- Second flex item: Championship with hover effect -->
-    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/chill.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/2.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
       <div class="absolute inset-0 bg-green-600 opacity-65"></div>
       <div class="text-4xl font-bold text-white relative text-content">Championship</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
@@ -84,8 +84,8 @@
     </div>
 
     <!-- Third flex item: Events with hover effect -->
-    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/chill.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
-      <div class="absolute inset-0 bg-red-600 opacity-65"></div>
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/3.webp')] bg-cover bg-[center_top_20%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+      <div class="absolute inset-0 bg-rose-600 opacity-65"></div>
       <div class="text-4xl font-bold text-white relative text-content">Events</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         Exciting events that bring people together!
@@ -93,7 +93,7 @@
     </div>
 
     <!-- Fourth flex item: Music Nights with hover effect -->
-    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/table.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/4.webp')] bg-cover bg-[center_top_40%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
       <div class="absolute inset-0 bg-yellow-300 opacity-65"></div>
       <div class="text-4xl font-bold text-white relative text-content">Music Nights</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
@@ -102,7 +102,7 @@
     </div>
 
     <!-- Fifth flex item: Trivia Nights with hover effect -->
-    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/table.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/5.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
       <div class="absolute inset-0 bg-blue-600 opacity-65"></div>
       <div class="text-4xl font-bold text-white relative text-content">Trivia Nights</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
@@ -111,8 +111,8 @@
     </div>
 
     <!-- Sixth flex item: Book Club with hover effect -->
-    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/table.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
-      <div class="absolute inset-0 bg-blue-400 opacity-65"></div>
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/8.webp')] bg-cover bg-[center_top_35%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+      <div class="absolute inset-0 bg-teal-300 opacity-65"></div>
       <div class="text-4xl font-bold text-white relative text-content">Book Club</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         Join us for interesting book discussions!
@@ -120,8 +120,8 @@
     </div>
 
     <!-- Seventh flex item: Workshops with hover effect -->
-    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/table.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
-      <div class="absolute inset-0 bg-slate-400 opacity-65"></div>
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/7.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+      <div class="absolute inset-0 bg-purple-700 opacity-65"></div>
       <div class="text-4xl font-bold text-white relative text-content">Workshops</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         Enhance your skills through engaging workshops!
@@ -129,14 +129,47 @@
     </div>
 
     <!-- Eighth flex item: Dungeon and Dragons with hover effect -->
-    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/activities/table.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
-      <div class="absolute inset-0 bg-green-500 opacity-65"></div>
-      <div class="text-4xl font-bold text-white relative text-content">Dungeon and Dragons</div>
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/6.webp')] bg-cover bg-[center_top_25%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+      <div class="absolute inset-0 bg-red-600 opacity-65"></div>
+      <div class="text-4xl font-bold text-white relative text-content">Dungeon & Dragons</div>
       <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
         An epic adventure in the world of imagination!
       </div>
     </div>
   
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/7.webp')] bg-cover bg-[center_top_50%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+      <div class="absolute inset-0 bg-pink-400 opacity-65"></div>
+      <div class="text-4xl font-bold text-white relative text-content">Kids Activities</div>
+      <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
+      Engaging activities for kids of all ages!
+      </div>
+    </div>
+
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/9.webp')] bg-cover bg-[center_top_70%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+      <div class="absolute inset-0 bg-orange-400 opacity-65"></div>
+      <div class="text-4xl font-bold text-white relative text-content">Storytelling</div>
+      <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
+      Fascinating stories await you!
+      </div>
+    </div>
+
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/1.webp')] bg-cover bg-[center_top_28%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+      <div class="absolute inset-0 bg-emerald-300 opacity-65"></div>
+      <div class="text-4xl font-bold text-white relative text-content">Podcast</div>
+      <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
+      Inspiring podcasts on various topics!
+
+</div>
+    </div>
+
+    <div class="h-[20vh] flex flex-col items-center justify-center text-white bg-[url('/act/11.webp')] bg-cover bg-[center_top_35%] bg-no-repeat relative hover:show-description tap-to-show-description" onclick="this.classList.toggle('active')">
+      <div class="absolute inset-0 bg-fuchsia-400 opacity-65"></div>
+      <div class="text-4xl font-bold text-white relative text-content">Social Experiments</div>
+      <div class="description absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-60 p-4">
+      Dive into unique social experiments!
+
+      </div>
+    </div>
   </section>
 
   <script>

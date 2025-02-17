@@ -95,7 +95,7 @@
       <div id="links" class="grid grid-cols-4 max-md:grid-cols-2 w-full h-1/3 max-md:h-2/3">
         
         <!-- Link 1 -->
-        <a href="/menu/Drinks" class="flex flex-col items-center justify-center text-white bg-[url('/navimages/menu.webp')] bg-cover bg-center relative">
+        <a href="/menu/Drinks" class="flex flex-col items-center justify-center text-white bg-[url('/activities/menu.webp')] bg-cover bg-center relative">
           <div class="absolute inset-0 bg-green-600 opacity-65"></div>
           <img src="icon/menu.svg" alt="Menu" class="w-32 h-32 relative rotateY-animation" style="transform-style: preserve-3d;">
         </a>
@@ -120,7 +120,7 @@
       </div>
     
       <!-- Community Section -->
-      <div id="community" class="flex items-center justify-center w-full h-2/3 max-md:h-1/3 bg-white shadow-lg bg-[url('/navimages/community.webp')] bg-cover bg-center relative">
+      <div id="community" class="flex items-center justify-center w-full h-2/3 max-md:h-1/3 bg-white shadow-lg bg-[url('/activities/play.webp')] bg-cover bg-center relative">
         <div class="absolute inset-0 bg-white opacity-50"></div>
         <a href="https://chat.whatsapp.com/GnUAVKuoK0KJaKw0R7BVgs" target="_blank" class="bg-transparent text-black border-4 border-black py-3 px-12 text-2xl font-bold rounded-full hover:bg-black hover:text-white transition relative">
           join our community
@@ -162,10 +162,11 @@
     <div class="relative z-10 container mx-auto px-4 lg:px-8 flex flex-wrap lg:flex-nowrap items-start">
       <!-- Text Section -->
       <div class="text-left w-full lg:w-1/2 space-y-6">
-        <h2 class="text-2xl md:text-3xl font-bold">Lorem ipsum dolor</h2>
-        <p class="text-base md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra, elit at tincidunt suscipit, risus arcu lacinia arcu, vitae feugiat nisi arcu eget velit.</p>
-        <p class="text-base md:text-lg">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        <p class="text-base md:text-lg">Sed tincidunt, tortor sit amet interdum egestas, est enim consequat magna, vitae euismod purus eros ac magna.</p>
+        <h2 class="text-2xl md:text-3xl font-bold">One Dimension</h2>
+        <p class="text-base md:text-lg">Near Round Point Byakout</p>
+        <p class="text-base md:text-lg">Moultaka Building</p>
+        <p class="text-base md:text-lg">Facing Sallet Barakeh Zalka</p>
+        <p class="text-base md:text-lg">Same Street of Saydet El Najet</p>
       </div>
   
       <!-- Map Section -->

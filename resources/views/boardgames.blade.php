@@ -6,7 +6,7 @@
     <title>Board Games</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen flex justify-center items-start relative bg-cover bg-center" style="background-image: url('/activities/play.webp'); background-attachment: fixed;">
+<body class="min-h-screen flex justify-center items-start relative bg-cover bg-center" style="background-image: url('/activities/boardgames.webp'); background-attachment: fixed;">
     <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
 
     <div class="text-center text-white max-w-md relative z-10 pt-16">
@@ -15,7 +15,6 @@
             
         <img src="icon/dice.svg" alt="Schedule" class="mx-auto w-80">
 
-            <!-- <div class="text-6xl font-bold">🎲🎲</div> -->
         </div>
         <h1 class="text-4xl font-bold tracking-wide border-t-2 border-b-2 border-white py-2">TYPE OF GAMES</h1>
 
@@ -30,7 +29,7 @@
                     <!-- Dropdown content (will be inline with the rest of the content) -->
                     <div class="category-content hidden mt-2 p-4 bg-transparent text-white rounded-md">
                         @if(count($games) > 0)
-                            <ul class="text-left space-y-2 text-lg">
+                            <ul class="text-left space-y-2 text-2xl">
                                 @foreach($games as $game)
                                     <li>{{ $game }}</li>
                                 @endforeach

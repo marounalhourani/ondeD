@@ -91,7 +91,7 @@
 <body class="m-0 p-0">
 
   <!-- Main Section with Fixed Background and Content Inside -->
-  <section class="w-full h-auto min-h-screen fixed-bg bg-[url('/navimages/menu.webp')]">
+  <section class="w-full h-auto min-h-screen fixed-bg bg-[url('/activities/jdidjdid.jpg')]">
     <!-- Green Overlay (background) -->
     <div class="absolute inset-0 bg-gradient-to-b opacity-50 z-0"></div>
 

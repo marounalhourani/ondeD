@@ -62,12 +62,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         DB::table('users')->insert([[
-            'name' => 'mich',
-            'password' => Hash::make('0000')],
-            [
-                'name' => 'admin',
-                'password' => Hash::make('admin')
-            ] 
+            'name' => 'admin',
+            'password' => Hash::make('youshallnotpass@')],
             // Hash the password before storing
         ]);
 

@@ -29,7 +29,7 @@
                         <span>{{ $date }}</span> 
                         <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="category-content hidden mt-3 p-4 bg-transparent text-white text-lg rounded-lg transition-all duration-500 transform scale-95 opacity-0">
+                    <div class="category-content hidden mt-3 p-4 bg-transparent text-white text-2xl rounded-lg transition-all duration-500 transform scale-95 opacity-0">
                         @if(!empty($events))
                             <ul class="text-left space-y-2">
                                 @foreach($events as $event)
