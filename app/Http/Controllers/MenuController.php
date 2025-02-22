@@ -27,7 +27,7 @@ class MenuController extends Controller
     public function createCategory(){
         // Retrieve all main categories (without parent)
         $categories = Category::whereNull('parent_id')->get();
-        return view('admin.menu.createCat', compact('categories'));
+        return view('admin.Menu.createCat', compact('categories'));
     }
 
 
@@ -67,7 +67,7 @@ public function showAllCategories()
         $category->direct_items_count = $category->items->count();
     }
 
-    return view('admin.menu.category', compact('mainCategories'));
+    return view('admin.Menu.category', compact('mainCategories'));
 }
 
 public function showCategory($id)
@@ -83,7 +83,7 @@ public function showCategory($id)
     // Count items directly in the category
     $directItemsCount = $category->items->count();
 
-    return view('admin.menu.single-category', compact('category', 'totalItemsInSubcategories', 'directItemsCount'));
+    return view('admin.Menu.single-category', compact('category', 'totalItemsInSubcategories', 'directItemsCount'));
 }
 
 public function deleteCategory($id)
@@ -131,7 +131,7 @@ public function updateCategory(Request $request, $id)
 public function createItem(){
 
     $subcategories = Category::whereNotNull('parent_id')->get();
-    return view('admin.menu.createItem', compact('subcategories'));}
+    return view('admin.Menu.createItem', compact('subcategories'));}
 
 
 public function storeItem(Request $request)
@@ -167,7 +167,7 @@ public function showItem($id)
 
     $item = Item::with('category.parent')->findOrFail($id);
     
-    return view('admin.menu.show-item', compact('item','subcategories'));
+    return view('admin.Menu.show-item', compact('item','subcategories'));
 }
 
 public function deleteItem($id)
